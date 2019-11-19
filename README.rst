@@ -7,7 +7,7 @@ geehydro
         :target: https://pypi.python.org/pypi/geehydro
 
 .. image:: https://img.shields.io/travis/giswqs/geehydro.svg
-        :target: https://travis-ci.org/giswqs/geehydro
+        :target: https://travis-ci.com/giswqs/geehydro
 
 .. image:: https://readthedocs.org/projects/geehydro/badge/?version=latest
         :target: https://geehydro.readthedocs.io/en/latest/?badge=latest
