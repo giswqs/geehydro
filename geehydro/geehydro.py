@@ -6,8 +6,8 @@ import os
 import ee
 import folium
 from folium import plugins
-from .add_layer import add_ee_layer
-from .basemaps import basemaps
+from add_layer import add_ee_layer
+from basemaps import basemaps
 
 ee.Initialize()
 

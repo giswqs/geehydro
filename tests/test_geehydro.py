@@ -7,7 +7,7 @@
 import unittest
 from click.testing import CliRunner
 
-from geehydro import geehydro
+# from geehydro import geehydro
 from geehydro import cli
 
 

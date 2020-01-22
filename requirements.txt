@@ -1,2 +1,3 @@
 earthengine-api
 folium
+click
