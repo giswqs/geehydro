@@ -9,7 +9,7 @@ from folium import plugins
 # from add_layer import add_ee_layer
 # from basemaps import basemaps
 
-ee.Initialize()
+# ee.Initialize()
 
 
 
@@ -175,6 +175,8 @@ folium.Map.centerObject = centerObject
 
 
 if __name__ == '__main__':
+
+    ee.Initialize()
     
     dem = ee.Image('USGS/SRTMGL1_003')
     # Set visualization parameters.
