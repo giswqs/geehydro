@@ -51,68 +51,10 @@ def addLayer(self, ee_object, vis_params={}, name='Layer untitled', shown=True, 
         show=shown,
         opacity=opacity
     ).add_to(self)
-
-
-
-# Adds a given EE object to the map as a layer.
-def addLayer2(self, ee_object, vis_params={}, name='Layer', shown=True, opacity=1):
-    
-    try:    
-        # display ee.Image()
-        if isinstance(ee_object, ee.image.Image):    
-            map_id_dict = ee.Image(ee_object).getMapId(vis_params)
-            folium.raster_layers.TileLayer(
-            tiles = map_id_dict['tile_fetcher'].url_format,
-            attr = 'Google Earth Engine',
-            name = name,
-            overlay = True,
-            control = True,
-            show=shown,
-            opacity=opacity
-            ).add_to(self)
-        # display ee.ImageCollection()
-        elif isinstance(ee_object, ee.imagecollection.ImageCollection):    
-            ee_object_new = ee_object.mosaic()
-            map_id_dict = ee.Image(ee_object_new).getMapId(vis_params)
-            folium.raster_layers.TileLayer(
-            tiles = map_id_dict['tile_fetcher'].url_format,
-            attr = 'Google Earth Engine',
-            name = name,
-            overlay = True,
-            control = True,
-            show=shown,
-            opacity=opacity
-            ).add_to(self)
-        # display ee.Geometry()
-        elif isinstance(ee_object, ee.geometry.Geometry):    
-            folium.GeoJson(
-            data = ee_object.getInfo(),
-            name = name,
-            overlay = True,
-            control = True,
-            show=shown,
-            opacity=opacity
-        ).add_to(self)
-        # display ee.FeatureCollection()
-        elif isinstance(ee_object, ee.featurecollection.FeatureCollection):  
-            ee_object_new = ee.Image().paint(ee_object, 0, 2)
-            map_id_dict = ee.Image(ee_object_new).getMapId(vis_params)
-            folium.raster_layers.TileLayer(
-            tiles = map_id_dict['tile_fetcher'].url_format,
-            attr = 'Google Earth Engine',
-            name = name,
-            overlay = True,
-            control = True,
-            show=shown,
-            opacity=opacity
-        ).add_to(self)
-    
-    except:
-        print("Could not display {}".format(name))
     
 # Add EE drawing method to folium.
 folium.Map.addLayer = addLayer
-folium.Map.addLayer2 = addLayer2
+
 
 
 # Modifies the Google Maps basemap
