@@ -9,7 +9,7 @@
 '''
 
 # %%
-!pip install geehydro
+# !pip install geehydro
 
 # %%
 import ee
