@@ -23,15 +23,9 @@ Python package for mapping inundation dynamics using Google Earth Engine
 * Documentation: https://geehydro.readthedocs.io.
 
 
-Features
---------
 
-* TODO
+Important Note
+--------------
+This package is no longer being actively maintained. Please use the `geemap <https://github.com/giswqs/geemap>`__ package instead. 
 
-Credits
--------
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
